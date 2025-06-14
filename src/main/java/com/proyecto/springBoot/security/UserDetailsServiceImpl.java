@@ -21,7 +21,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         return User.builder()
                 .username(usuario.getEmail())
                 .password(usuario.getPassword())
-                .authorities(usuario.getRol()) // 'ADMIN' o 'SECRETARIA'
+                .authorities(usuario.getRol())
                 .build();
     }
 }
