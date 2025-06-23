@@ -152,7 +152,7 @@ public class EstudianteController {
     @PostMapping("/admin/estudiantes/editar")
     public String editarEstudiante(@ModelAttribute("estudianteEditar") Estudiante estudiante, Model model, Authentication auth) {
         try {
-            servicio.save(estudiante);
+            servicio.update(estudiante);
         } catch (IllegalArgumentException ex) {
             String errorMsg = ex.getMessage();
             if (errorMsg.contains("cédula")) {

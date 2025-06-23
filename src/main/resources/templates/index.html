@@ -18,6 +18,13 @@
                 </svg>
                 <span class="fw-bold text-primary" th:text="${nombreSecretaria}"></span>
             </div>
+            <div th:if="${rol == 'ADMIN'}" class="me-3 d-flex align-items-center">
+                <svg width="28" height="28" fill="#0d6efd" viewBox="0 0 24 24" class="me-1">
+                    <circle cx="12" cy="7" r="5" stroke="#0d6efd" stroke-width="1.5" fill="#f1f5fa"/>
+                    <path d="M2 21c0-4.9706 4.0294-9 9-9s9 4.0294 9 9" stroke="#0d6efd" stroke-width="1.5" fill="none"/>
+                </svg>
+                <span class="fw-bold text-primary">Administrador</span>
+            </div>
             <form th:action="@{/logout}" method="post" class="mb-0 ms-2">
                 <button class="btn btn-outline-danger">Cerrar sesión</button>
             </form>
