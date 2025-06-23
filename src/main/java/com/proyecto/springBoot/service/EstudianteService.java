@@ -28,6 +28,15 @@ public class EstudianteService {
         return repository.save(estudiante);
     }
 
+    /**
+     * Updates an existing student without validating uniqueness of the cédula.
+     * Used when editing a record.
+     */
+    public Estudiante update(Estudiante estudiante) {
+        Validador.validarEstudiante(estudiante);
+        return repository.save(estudiante);
+    }
+
     public void deleteById(String cedula){
         repository.deleteById(cedula);
     }
